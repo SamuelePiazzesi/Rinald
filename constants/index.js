@@ -3,13 +3,19 @@ export const studies = [
 		id: "st1",
 		title: "Degree",
 		description: "ia",
-		image: "/images/degree.jpeg",
+		image: "/images/studi-1.png",
 	},
 	{
 		id: "st2",
 		title: "Degree",
 		description: "ia",
-		image: "/images/degree.jpeg",
+		image: "/images/studi-2.png",
+	},
+	{
+		id: "st3",
+		title: "Degree",
+		description: "ia",
+		image: "/images/studi-3.png",
 	},
 ];
 
@@ -18,13 +24,19 @@ export const experiences = [
 		id: "exp1",
 		title: "Degree",
 		description: "ia",
-		image: "/images/degree.jpeg",
+		image: "/images/esperienze-1.png",
 	},
 	{
 		id: "exp2",
 		title: "Degree",
 		description: "ia",
-		image: "/images/degree.jpeg",
+		image: "/images/esperienze-2.png",
+	},
+	{
+		id: "exp3",
+		title: "Degree",
+		description: "ia",
+		image: "/images/esperienze-3.png",
 	},
 ];
 

@@ -36,10 +36,13 @@ const Layout = ({ children }) => {
 	}, [startAnimation]);
 
 	return (
-		<div className="bg-black w-full h-screen">
+		<div className="bg-black w-full h-screen overflow-scroll">
 			<motion.div animate={homeAnimation} initial="hidden" variants={variants}>
 				<Header />
-				<main className="h-screen relative py-32 px-2">{children}</main>
+				<main className="h-screen relative md:py-32 py-24 px-4 lg:max-w-5xl m-auto">
+					{children}
+				</main>
+				<footer>ciao</footer>
 			</motion.div>
 			{visibleVideo && (
 				<motion.div
