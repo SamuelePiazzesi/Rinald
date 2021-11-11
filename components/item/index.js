@@ -54,8 +54,8 @@ const Item = ({ item, onClose }) => {
 							</p>
 
 							<a
-								href="mailto:test@email.com"
-								className="py-2 px-4 bg-yellow-300 text-black font-semibold rounded-md"
+								href="mailto:rinaldsefa@msn.com"
+								className="py-2 px-4 bg-yellow-300 text-black font-semibold rounded-md pointer-events-auto"
 							>
 								<div className="flex justify-between text-xs sm:text-base">
 									<MailIcon /> <span className="ml-2 ">rinaldsefa@msn.com</span>
@@ -67,8 +67,8 @@ const Item = ({ item, onClose }) => {
 							</p>
 
 							<a
-								href="mailto:test@email.com"
-								className=" bg-green-500	 text-white font-semibold rounded-full h-12 w-12 sm:h-16 sm:w-16 flex items-center justify-center"
+								href="tel:+39388 116 5973"
+								className=" bg-green-500 text-white font-semibold rounded-full h-12 w-12 sm:h-16 sm:w-16 flex items-center justify-center pointer-events-auto"
 							>
 								<PhoneIcon />
 							</a>

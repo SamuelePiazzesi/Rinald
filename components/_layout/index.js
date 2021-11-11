@@ -55,6 +55,7 @@ const Layout = ({ children }) => {
 					<ReactPlayer
 						width="100%"
 						height="100%"
+						playsinline
 						playing
 						onProgress={(info) => {
 							if (info.playedSeconds > 3) {
