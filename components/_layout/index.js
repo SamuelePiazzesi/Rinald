@@ -2,6 +2,7 @@ import { motion, useAnimation } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 import { useWindowSize } from "../../hooks/window-size";
+import Footer from "./footer";
 import Header from "./header";
 
 const Layout = ({ children }) => {
@@ -38,19 +39,23 @@ const Layout = ({ children }) => {
 	}, [startAnimation]);
 
 	return (
-		<div className="bg-black w-full h-screen overflow-scroll">
+		<div
+			className={`bg-black w-full ${
+				visibleVideo && "h-screen overflow-y-hidden"
+			}`}
+		>
 			<motion.div animate={homeAnimation} initial="hidden" variants={variants}>
 				<Header />
-				<main className="h-screen relative md:py-32 py-24 px-4 lg:max-w-5xl m-auto">
+				<main className="relative md:py-32 pt-24 pb-8 px-4 lg:max-w-5xl m-auto">
 					{children}
 				</main>
-				<footer>ciao</footer>
+				ì
 			</motion.div>
 			{visibleVideo && (
 				<motion.div
 					animate={videoAnimation}
 					variants={variants}
-					className="absolute top-0 bottom-0 left-0 right-0"
+					className="absolute top-0 bottom-0 left-0 right-0 h-screen"
 				>
 					<ReactPlayer
 						width="100%"

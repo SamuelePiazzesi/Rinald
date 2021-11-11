@@ -4,7 +4,7 @@ import Item from "../components/item";
 import Jumbotron from "../components/jumbotron";
 import List from "../components/list";
 import Layout from "../components/_layout";
-import { experiences, studies } from "../constants";
+import { experiences, skills, studies } from "../constants";
 
 const Home = () => {
 	const [selectedVideo, setSelectedVideo] = useState();
@@ -29,6 +29,12 @@ const Home = () => {
 				<List
 					title="Le mie esperienze"
 					items={experiences}
+					onSelect={(item) => setSelectedVideo(item)}
+				/>
+
+				<List
+					title="Le mie skill"
+					items={skills}
 					onSelect={(item) => setSelectedVideo(item)}
 				/>
 			</AnimateSharedLayout>

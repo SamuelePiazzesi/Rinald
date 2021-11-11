@@ -38,7 +38,7 @@ const Item = ({ item, onClose }) => {
 
 					<motion.div
 						className="content-container"
-						className="pt-64 md:pt-80 lg:pt-96  px-8"
+						className="pt-64 md:pt-80 lg:pt-96 p-8 md:p-16 md:mt-4"
 						animate
 					>
 						<span className="uppercase text-xs md:text-sm text-gray-300 font-extrabold mb-4 mt-8">

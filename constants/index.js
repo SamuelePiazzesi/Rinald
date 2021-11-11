@@ -40,6 +40,27 @@ export const experiences = [
 	},
 ];
 
+export const skills = [
+	{
+		id: "sk1",
+		title: "Skills",
+		description: "ia",
+		image: "/images/skills-1.png",
+	},
+	{
+		id: "sk2",
+		title: "Skills",
+		description: "ia",
+		image: "/images/skills-2.png",
+	},
+	{
+		id: "sk3",
+		title: "Skilla",
+		description: "ia",
+		image: "/images/skills-3.png",
+	},
+];
+
 export const jumbotron = {
 	id: "jumbotron",
 	video: "/videos/test.mp4",
