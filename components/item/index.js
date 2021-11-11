@@ -33,7 +33,6 @@ const Item = ({ item, onClose }) => {
 								url={item.video}
 								light={item.image}
 							/>
-							<div className="overlay" />
 						</div>
 					</motion.div>
 

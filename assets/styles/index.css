@@ -14,6 +14,7 @@
 
 .jumbotron-image {
 	background: url("../images/jumbotron.jpg") no-repeat center;
+	background-position-y: 11%;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -30,12 +31,7 @@
 }
 
 .overlay {
-	background: linear-gradient(
-		180deg,
-		#000000 0%,
-		rgba(255, 255, 255, 0),
-		#000000 100%
-	);
+	background-color: #000000;
 	position: absolute;
 	height: 100%;
 	width: 100%;

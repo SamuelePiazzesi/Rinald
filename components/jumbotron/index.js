@@ -9,30 +9,26 @@ const Jumbotron = ({ onPlay }) => {
 	return (
 		<motion.div layoutId={`card-container-${jumbotron.id}`}>
 			<motion.div layoutId={`card-image-container-${jumbotron.id}`}>
-				<div className="flex flex-col items-center justify-end jumbotron-image  h-56 md:h-64 lg:h-96 relative rounded">
+				<div className="flex flex-col justify-end items-start jumbotron-image h-56 md:h-64 lg:h-96 relative rounded">
 					<div className="overlay" />
-					<div className="flex items-center justify-center z-10 w-full px-8 py-2">
-						<div className="flex-none flex flex-col text-white justify-center items-center ">
-							<PlusIcon />
+					<div className="flex flex-col z-10 w-full px-4 md:px-8 py-2">
+						<h2 className="flex flex-col items-start text-white uppercase font-extrabold text-md md:text-5xl mb-4 md:mb-8">
+							Su di Me
+						</h2>
 
-							<span className="text-xs">Lista</span>
-						</div>
+						<p className="text-white max-w-sm mb-4 md:mb-8 text-xs md:text-base">
+							Direttore Creativo in un’azienda che si occupa di Lead Generation.
+							Scopri di più su di me, scegli un titolo!
+						</p>
 
-						<div className="flex-1 flex items-center justify-center mx-2 px-8">
-							<button
-								className="bg-white py-2 rounded-lg w-full md:w-48 lg:w-64 flex items-center justify-center px-8"
-								onClick={() => onPlay(jumbotron)}
-							>
-								{" "}
-								<PlayIcon />
-								<span className="ml-2">Riproduci</span>
-							</button>
-						</div>
-
-						<div className="flex-none flex flex-col text-white justify-center items-center">
-							<InfoIcon />
-							<span className="text-xs">Info</span>
-						</div>
+						<button
+							className="bg-white py-2 rounded-sm w-36 lg:w-48 flex items-center justify-center mb-4 md:mb-8"
+							onClick={() => onPlay(jumbotron)}
+						>
+							{" "}
+							<PlayIcon />
+							<span className="ml-2 font-bold">Riproduci</span>
+						</button>
 					</div>
 				</div>
 			</motion.div>

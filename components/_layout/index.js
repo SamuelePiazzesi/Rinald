@@ -1,6 +1,7 @@
 import { motion, useAnimation } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
+import { useWindowSize } from "../../hooks/window-size";
 import Header from "./header";
 
 const Layout = ({ children }) => {
@@ -13,6 +14,7 @@ const Layout = ({ children }) => {
 		},
 	};
 
+	const size = useWindowSize();
 	const [visibleVideo, setVisibleVideo] = useState(true);
 	const [startAnimation, setStartAnimation] = useState(false);
 	const videoAnimation = useAnimation();
@@ -63,7 +65,11 @@ const Layout = ({ children }) => {
 							setVisibleVideo(false);
 						}}
 						muted
-						url="/videos/intro-vertical.mp4"
+						url={
+							size.width > 568
+								? "/videos/intro.mp4"
+								: "/videos/intro-vertical.mp4"
+						}
 					/>
 				</motion.div>
 			)}
