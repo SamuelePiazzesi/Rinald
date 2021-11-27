@@ -1,11 +1,10 @@
-import {motion, useAnimation} from "framer-motion";
-import React, {useEffect, useState} from "react";
+import { motion, useAnimation } from "framer-motion";
+import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
-import {useWindowSize} from "../../hooks/window-size";
-import Footer from "./footer";
+import { useWindowSize } from "../../hooks/window-size";
 import Header from "./header";
 
-const Layout = ({disableOverflow, children}) => {
+const Layout = ({ disableOverflow, children }) => {
 	const variants = {
 		visible: {
 			opacity: 1,
@@ -24,11 +23,11 @@ const Layout = ({disableOverflow, children}) => {
 	const animationSequence = async () => {
 		await videoAnimation.start({
 			opacity: 0,
-			transition: {duration: 1.5},
+			transition: { duration: 1.5 },
 		});
 		return await homeAnimation.start({
 			opacity: 1,
-			transition: {duration: 1.5},
+			transition: { duration: 1.5 },
 		});
 	};
 
@@ -39,47 +38,53 @@ const Layout = ({disableOverflow, children}) => {
 	}, [startAnimation]);
 
 	return (
-		<div
-			className={`bg-black w-full ${
-				visibleVideo || (disableOverflow && "h-screen overflow-y-hidden")
-			}`}
-		>
-			<motion.div animate={homeAnimation} initial='hidden' variants={variants}>
-				<Header />
-				<main className='relative md:py-32 pt-24 pb-8 px-4 lg:max-w-5xl m-auto'>
-					{children}
-				</main>
-				ì
-			</motion.div>
-			{visibleVideo && (
+		<>
+			<div
+				className={`bg-black w-full ${
+					visibleVideo || (disableOverflow && "h-screen overflow-y-hidden")
+				}`}
+			>
 				<motion.div
-					animate={videoAnimation}
+					animate={homeAnimation}
+					initial="hidden"
 					variants={variants}
-					className='absolute top-0 bottom-0 left-0 right-0 h-screen'
 				>
-					<ReactPlayer
-						width='100%'
-						height='100%'
-						playsinline
-						playing
-						onProgress={info => {
-							if (info.playedSeconds > 3) {
-								setStartAnimation(true);
-							}
-						}}
-						onEnded={() => {
-							setVisibleVideo(false);
-						}}
-						muted
-						url={
-							size.width > 568
-								? "/videos/intro.mp4"
-								: "/videos/intro-vertical.mp4"
-						}
-					/>
+					<Header />
+					<main className="relative md:py-32 pt-24 pb-8 px-4 lg:max-w-5xl m-auto">
+						{children}
+					</main>
+					ì
 				</motion.div>
-			)}
-		</div>
+				{visibleVideo && (
+					<motion.div
+						animate={videoAnimation}
+						variants={variants}
+						className="absolute top-0 bottom-0 left-0 right-0 h-screen"
+					>
+						<ReactPlayer
+							width="100%"
+							height="100%"
+							playsinline
+							playing
+							onProgress={(info) => {
+								if (info.playedSeconds > 3) {
+									setStartAnimation(true);
+								}
+							}}
+							onEnded={() => {
+								setVisibleVideo(false);
+							}}
+							muted
+							url={
+								size.width > 568
+									? "/videos/intro.mp4"
+									: "/videos/intro-vertical.mp4"
+							}
+						/>
+					</motion.div>
+				)}
+			</div>
+		</>
 	);
 };
 
