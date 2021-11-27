@@ -12,6 +12,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+	background-color: #000000;
+}
+
 .jumbotron-image {
 	background: url("../images/jumbotron.jpg") no-repeat center;
 	background-position-y: 11%;

@@ -12,6 +12,14 @@ const Card = ({ item, onSelect }) => {
 					scale: 1.2,
 					transition: { duration: 0.3, stiffness: 300 },
 				}}
+				whileTap={{
+					scale: 1.2,
+					transition: { duration: 0.3, stiffness: 300 },
+				}}
+				whileFocus={{
+					scale: 1.2,
+					transition: { duration: 0.3, stiffness: 300 },
+				}}
 				className="rounded-2xl background-image h-full w-full"
 				style={{ backgroundImage: `url('${item.image}')` }}
 				layoutId={`card-image-container-${item.id}`}
