@@ -1,11 +1,11 @@
-import { motion, useAnimation } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import {motion, useAnimation} from "framer-motion";
+import React, {useEffect, useState} from "react";
 import ReactPlayer from "react-player";
-import { useWindowSize } from "../../hooks/window-size";
+import {useWindowSize} from "../../hooks/window-size";
 import Footer from "./footer";
 import Header from "./header";
 
-const Layout = ({ children }) => {
+const Layout = ({disableOverflow, children}) => {
 	const variants = {
 		visible: {
 			opacity: 1,
@@ -24,11 +24,11 @@ const Layout = ({ children }) => {
 	const animationSequence = async () => {
 		await videoAnimation.start({
 			opacity: 0,
-			transition: { duration: 1.5 },
+			transition: {duration: 1.5},
 		});
 		return await homeAnimation.start({
 			opacity: 1,
-			transition: { duration: 1.5 },
+			transition: {duration: 1.5},
 		});
 	};
 
@@ -41,12 +41,12 @@ const Layout = ({ children }) => {
 	return (
 		<div
 			className={`bg-black w-full ${
-				visibleVideo && "h-screen overflow-y-hidden"
+				visibleVideo || (disableOverflow && "h-screen overflow-y-hidden")
 			}`}
 		>
-			<motion.div animate={homeAnimation} initial="hidden" variants={variants}>
+			<motion.div animate={homeAnimation} initial='hidden' variants={variants}>
 				<Header />
-				<main className="relative md:py-32 pt-24 pb-8 px-4 lg:max-w-5xl m-auto">
+				<main className='relative md:py-32 pt-24 pb-8 px-4 lg:max-w-5xl m-auto'>
 					{children}
 				</main>
 				ì
@@ -55,14 +55,14 @@ const Layout = ({ children }) => {
 				<motion.div
 					animate={videoAnimation}
 					variants={variants}
-					className="absolute top-0 bottom-0 left-0 right-0 h-screen"
+					className='absolute top-0 bottom-0 left-0 right-0 h-screen'
 				>
 					<ReactPlayer
-						width="100%"
-						height="100%"
+						width='100%'
+						height='100%'
 						playsinline
 						playing
-						onProgress={(info) => {
+						onProgress={info => {
 							if (info.playedSeconds > 3) {
 								setStartAnimation(true);
 							}

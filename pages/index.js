@@ -10,7 +10,7 @@ const Home = () => {
 	const [selectedVideo, setSelectedVideo] = useState();
 
 	return (
-		<Layout>
+		<Layout disableOverflow={selectedVideo}>
 			<AnimateSharedLayout type="crossfade">
 				<Jumbotron onPlay={(item) => setSelectedVideo(item)} />
 
