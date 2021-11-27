@@ -15,6 +15,7 @@ function MyApp({ Component, pageProps }) {
 					content="Art and Creative director"
 					key="ogdesc"
 				/>
+				<meta property="og:image" content="/logo.png" key="ogimage" />
 				<title>Rinald Sefa</title>
 			</Head>
 
