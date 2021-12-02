@@ -8,15 +8,23 @@ function MyApp({ Component, pageProps }) {
 				<link rel="shortcut icon" href="/logo.png" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<meta charSet="utf-8" />
-				<meta name="description" content="Art and Creative director"></meta>
-				<meta property="og:title" content="Rinald Sefa" key="ogtitle" />
+				<meta
+					name="description"
+					content="Scopri chi sono, cosa faccio e come lo faccio!
+"
+				></meta>
+				<meta
+					property="og:title"
+					content="Rinald Sefa - Creative & Art Director"
+					key="ogtitle"
+				/>
 				<meta
 					property="og:description"
-					content="Art and Creative director"
+					content="Scopri chi sono, cosa faccio e come lo faccio!"
 					key="ogdesc"
 				/>
 				<meta property="og:image" content="/logo.png" key="ogimage" />
-				<title>Rinald Sefa</title>
+				<title>Rinald Sefa - Creative & Art Director</title>
 			</Head>
 
 			<Component {...pageProps} />

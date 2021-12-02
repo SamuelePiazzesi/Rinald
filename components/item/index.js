@@ -94,12 +94,12 @@ const Item = ({ item, onClose }) => {
 								</p>
 
 								<a
-									href="mailto:rinaldsefa@msn.com"
+									href="mailto:hello@rinaldsefa.com"
 									className="py-2 px-4 bg-yellow-300 text-black font-semibold rounded-md pointer-events-auto"
 								>
 									<div className="flex justify-between text-xs sm:text-base">
 										<MailIcon />{" "}
-										<span className="ml-2 ">rinaldsefa@msn.com</span>
+										<span className="ml-2 ">hello@rinaldsefa.com</span>
 									</div>
 								</a>
 

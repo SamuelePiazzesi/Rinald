@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 const Card = ({ item, onSelect }) => {
 	return (
 		<motion.div
+			style={{ willChange: "transform" }}
 			layoutId={`card-container-${item.id}`}
 			className="w-64 md:w-96 h-36 md:h-48 mr-6 flex flex-nowrap bg-gray-400 flex-none rounded-2xl relative cursor-pointer overflow-hidden"
 			onClick={() => onSelect()}
