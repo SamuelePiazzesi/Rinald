@@ -29,7 +29,7 @@ const Item = ({ item, onClose }) => {
 						className="card-image-container"
 						layoutId={`card-image-container-${id}`}
 					>
-						<div className="w-full h-60 md:h-64 relative background-image">
+						<div className="w-full h-60 md:h-96 relative background-image">
 							<ReactPlayer
 								width="100%"
 								height="100%"
@@ -44,12 +44,12 @@ const Item = ({ item, onClose }) => {
 
 					<motion.div
 						className="content-container"
-						className="pt-64 md:pt-72  p-4 "
+						className="pt-64 md:pt-96 p-4"
 						animate
 					>
-						<span className="uppercase text-xs text-gray-300 font-extrabold mb-4 mt-8">
+						<div className="uppercase text-xs text-gray-300 font-extrabold mb-4 mt-2 md:mt-4">
 							Un po’ di informazioni su di me
-						</span>
+						</div>
 
 						<div className="my-2 text-gray-300 max-h-64 md:max-h-72 text-justify overflow-scroll text-xs  pointer-events-auto">
 							<p className="mb-4">
