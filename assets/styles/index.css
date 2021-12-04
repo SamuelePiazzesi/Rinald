@@ -30,7 +30,7 @@ body {
 
 .jumbotron-image {
 	background: url("/images/jumbotron.png") no-repeat center;
-	background-position-y: 11%;
+	background-position-y: 16%;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -127,7 +127,7 @@ body {
 	.card-content-container.open {
 		left: 0;
 		right: 0;
-		max-width: 570px;
+		max-width: 826px;
 		height: 100%;
 		margin: auto;
 		display: flex;
@@ -135,7 +135,7 @@ body {
 	}
 
 	.open .card-content {
-		max-height: 640px;
+		max-height: 890px;
 		pointer-events: none;
 	}
 }

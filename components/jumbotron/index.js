@@ -16,7 +16,7 @@ const Jumbotron = ({ onPlay }) => {
 							Su di Me
 						</h2>
 
-						<p className="text-white max-w-sm mb-4 md:mb-8 text-xs md:text-base">
+						<p className="text-white w-36 md:w-96 mb-4 md:mb-8 text-xs md:text-xl">
 							Direttore Creativo in un’azienda che si occupa di Lead Generation.
 							Scopri di più su di me, scegli un titolo!
 						</p>

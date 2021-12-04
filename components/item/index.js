@@ -29,7 +29,7 @@ const Item = ({ item, onClose }) => {
 						className="card-image-container"
 						layoutId={`card-image-container-${id}`}
 					>
-						<div className="w-full h-60 relative background-image">
+						<div className="w-full h-60 md:h-64 relative background-image">
 							<ReactPlayer
 								width="100%"
 								height="100%"
@@ -44,14 +44,14 @@ const Item = ({ item, onClose }) => {
 
 					<motion.div
 						className="content-container"
-						className="pt-64  p-4 "
+						className="pt-64 md:pt-72  p-4 "
 						animate
 					>
 						<span className="uppercase text-xs text-gray-300 font-extrabold mb-4 mt-8">
 							Un po’ di informazioni su di me
 						</span>
 
-						<div className="my-2 text-gray-300 max-h-64 md:max-h-56 text-justify overflow-scroll text-xs  pointer-events-auto">
+						<div className="my-2 text-gray-300 max-h-64 md:max-h-full text-justify overflow-scroll text-xs  pointer-events-auto">
 							<p className="mb-4">
 								Mi chiamo Rinald, sono nato il 13 Ottobre 1993 a Manez, in
 								Albania. Nel ’97 sono arrivato in Italia, precisamente in
@@ -94,7 +94,7 @@ const Item = ({ item, onClose }) => {
 								diversi team e riuscire a gestire, proporre nuove idee e
 								analizzare le campagne dei clienti.
 							</p>
-							<p className="mb-4">
+							<p>
 								Attualmente sto continuando qui questa mia avventura, ma sento
 								di aver ancora molto da scoprire e sono sicuro che troverò nuove
 								realtà interessanti, che mi aiuteranno ad ampliare i miei
@@ -103,8 +103,8 @@ const Item = ({ item, onClose }) => {
 							</p>
 						</div>
 
-						<div className="flex flex-col	justify-center items-center">
-							<p className="my-2 text-gray-200 font-black text-xs text-center">
+						<div className="flex flex-col justify-center items-center">
+							<p className="my-2  text-gray-200 font-black text-xs text-center">
 								Se vuoi contattarmi scrivimi una mail
 							</p>
 
