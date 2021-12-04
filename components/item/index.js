@@ -51,7 +51,7 @@ const Item = ({ item, onClose }) => {
 							Un po’ di informazioni su di me
 						</span>
 
-						<div className="my-2 text-gray-300 max-h-64 md:max-h-full text-justify overflow-scroll text-xs  pointer-events-auto">
+						<div className="my-2 text-gray-300 max-h-64 md:max-h-72 text-justify overflow-scroll text-xs  pointer-events-auto">
 							<p className="mb-4">
 								Mi chiamo Rinald, sono nato il 13 Ottobre 1993 a Manez, in
 								Albania. Nel ’97 sono arrivato in Italia, precisamente in
