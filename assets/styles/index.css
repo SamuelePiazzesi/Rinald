@@ -11,13 +11,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind screens;
 
 body {
 	background-color: #000000;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+	display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
 .jumbotron-image {
-	background: url("../images/jumbotron.jpg") no-repeat center;
+	background: url("/images/jumbotron.png") no-repeat center;
 	background-position-y: 11%;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -35,7 +47,31 @@ body {
 }
 
 .overlay {
-	background-color: #000000;
+	background-image: -webkit-linear-gradient(
+		rgba(0, 0, 0, 0) 0%,
+		rgba(0, 0, 0, 0.2) 50%,
+		rgba(0, 0, 0, 1) 100%
+	);
+	background-image: -moz-linear-gradient(
+		rgba(0, 0, 0, 0) 0%,
+		rgba(0, 0, 0, 0.2) 50%,
+		rgba(0, 0, 0, 1) 100%
+	);
+	background-image: -o-linear-gradient(
+		rgba(0, 0, 0, 0) 0%,
+		rgba(0, 0, 0, 0.2) 50%,
+		rgba(0, 0, 0, 1) 100%
+	);
+	background-image: -ms-linear-gradient(
+		rgba(0, 0, 0, 0) 0%,
+		rgba(0, 0, 0, 0.2) 50%,
+		rgba(0, 0, 0, 1) 100%
+	);
+	background-image: linear-gradient(
+		rgba(0, 0, 0, 0) 0%,
+		rgba(0, 0, 0, 0.2) 50%,
+		rgba(0, 0, 0, 1) 100%
+	);
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -43,7 +79,6 @@ body {
 	top: 0;
 	bottom: 0;
 	right: 0;
-	opacity: 0.6;
 }
 
 .card-content-container {
@@ -75,7 +110,6 @@ body {
 
 .open .card-content {
 	height: 100%;
-	overflow: scroll;
 	pointer-events: none;
 }
 
@@ -86,7 +120,24 @@ body {
 	left: 0;
 	overflow: hidden;
 	height: 620px;
-	width: 100vw;
+	width: 100%;
+}
+
+@screen sm {
+	.card-content-container.open {
+		left: 0;
+		right: 0;
+		max-width: 570px;
+		height: 100%;
+		margin: auto;
+		display: flex;
+		align-items: center;
+	}
+
+	.open .card-content {
+		max-height: 640px;
+		pointer-events: none;
+	}
 }
 
 .content-container {
@@ -103,5 +154,4 @@ body {
 	left: 50%;
 	transform: translateX(-50%);
 	width: 100%;
-	max-width: 990px;
 }

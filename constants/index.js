@@ -69,6 +69,6 @@ export const skills = [
 export const jumbotron = {
 	id: "jumbotron",
 	video: "/videos/test.mp4",
-	image: "/images/jumbotron.jpg",
+	image: "/images/jumbotron.png",
 	title: "Chi sono?",
 };

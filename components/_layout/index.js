@@ -41,7 +41,7 @@ const Layout = ({ disableOverflow, children }) => {
 		<>
 			<div
 				className={`bg-black w-full ${
-					visibleVideo || (disableOverflow && "h-screen overflow-y-hidden")
+					visibleVideo || disableOverflow ? "h-screen overflow-y-hidden" : ""
 				}`}
 			>
 				<motion.div
