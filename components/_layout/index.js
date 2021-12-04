@@ -2,6 +2,7 @@ import { motion, useAnimation } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 import { useWindowSize } from "../../hooks/window-size";
+import Footer from "./footer";
 import Header from "./header";
 
 const Layout = ({ disableOverflow, children }) => {
@@ -50,10 +51,10 @@ const Layout = ({ disableOverflow, children }) => {
 					variants={variants}
 				>
 					<Header />
-					<main className="relative md:py-32 pt-24 pb-8 px-4 lg:max-w-5xl m-auto">
+					<main className="relative pt-24  md:pt-32 pb-8 md:pb-12 px-4 lg:max-w-5xl m-auto">
 						{children}
 					</main>
-					ì
+					<Footer />
 				</motion.div>
 				{visibleVideo && (
 					<motion.div
