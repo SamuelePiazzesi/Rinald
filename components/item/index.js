@@ -38,6 +38,17 @@ const Item = ({ item, onClose }) => {
 								style={{ pointerEvents: "auto" }}
 								url={item.video}
 								light={item.image}
+								config={{
+									file: {
+										attributes: {
+											style: {
+												height: "100%",
+												width: "100%",
+												objectFit: "cover",
+											},
+										},
+									},
+								}}
 							/>
 						</div>
 					</motion.div>
