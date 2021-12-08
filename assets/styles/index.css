@@ -164,7 +164,7 @@ body {
 	.card-content-container.open {
 		left: 0;
 		right: 0;
-		max-width: 826px;
+		max-width: 682px;
 		height: 100%;
 		margin: auto;
 		display: flex;

@@ -3,6 +3,7 @@ import { useState } from "react";
 import Item from "../components/item";
 import Jumbotron from "../components/jumbotron";
 import List from "../components/list";
+import SkillsList from "../components/skills-list";
 import Layout from "../components/_layout";
 import { experiences, skills, studies } from "../constants";
 
