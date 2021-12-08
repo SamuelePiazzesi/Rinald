@@ -3,6 +3,7 @@ import { useState } from "react";
 import Item from "../components/item";
 import Jumbotron from "../components/jumbotron";
 import List from "../components/list";
+import LiveButton from "../components/live-button";
 import Layout from "../components/_layout";
 import { experiences, skills, studies } from "../constants";
 
@@ -37,6 +38,8 @@ const Home = () => {
 					items={skills}
 					onSelect={(item) => setSelectedVideo(item)}
 				/>
+
+				<LiveButton onClick={(item) => setSelectedVideo(item)} />
 			</AnimateSharedLayout>
 		</Layout>
 	);

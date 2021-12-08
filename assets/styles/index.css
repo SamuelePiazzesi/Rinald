@@ -37,6 +37,14 @@ body {
 	background-size: cover;
 }
 
+.live-image {
+	background: url("/images/live.png") no-repeat center;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
 .background-image {
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
