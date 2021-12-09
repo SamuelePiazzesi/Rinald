@@ -15,8 +15,6 @@ const Item = ({ item, onClose }) => {
 		return _.sample(description);
 	}, []);
 
-	console.log(isLiveItem);
-
 	return (
 		<>
 			<motion.div
@@ -25,7 +23,7 @@ const Item = ({ item, onClose }) => {
 				exit={{ opacity: 0, transition: { duration: 0.15 } }}
 				transition={{ duration: 0.2, delay: 0.15 }}
 				style={{ pointerEvents: "auto" }}
-				className="detail-overlay z-20"
+				className="detail-overlay z-20 fixed overflow-hidden"
 			></motion.div>
 			<div className="card-content-container open">
 				<motion.div className="card-content" layoutId={`card-container-${id}`}>
