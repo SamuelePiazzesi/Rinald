@@ -46,10 +46,10 @@ const Item = ({ item, onClose }) => {
 								height="100%"
 								controls={!isLiveItem}
 								loop={isLiveItem}
-								playing={isLiveItem}
+								playing
 								style={{ pointerEvents: "auto" }}
 								url={video}
-								light={!isLiveItem && item.image}
+								light={item.image}
 							/>
 						</div>
 					</motion.div>
