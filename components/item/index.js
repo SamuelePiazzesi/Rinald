@@ -1,18 +1,21 @@
 import { motion } from "framer-motion";
 import { useMemo } from "react";
 import ReactPlayer from "react-player";
-import { useTime } from "react-timer-hook";
+
+import Timer from "../timer";
 import CloseIcon from "../ui/icons/close";
 import MailIcon from "../ui/icons/mail";
 
 const Item = ({ item, onClose }) => {
-	const { id, description, title } = item;
-	const { seconds, minutes, hours } = useTime({});
+	const { id, description, title, video } = item;
+
 	const isLiveItem = title === "Live";
 
 	const getLiveCatchPhrase = useMemo(() => {
 		return _.sample(description);
 	}, []);
+
+	console.log(isLiveItem);
 
 	return (
 		<>
@@ -37,32 +40,16 @@ const Item = ({ item, onClose }) => {
 						layoutId={`card-image-container-${id}`}
 					>
 						<div className="w-full h-60 md:h-96 relative background-image">
-							{isLiveItem && (
-								<div className="absolute font-bold text-sm text-white top-3 left-4">
-									{hours < 10 && "0"}
-									{hours}:{minutes < 10 && "0"}
-									{minutes}:{seconds < 10 && "0"}
-									{seconds}
-								</div>
-							)}
+							{isLiveItem && <Timer />}
 							<ReactPlayer
 								width="100%"
 								height="100%"
 								controls={!isLiveItem}
 								loop={isLiveItem}
-								playing
+								playing={isLiveItem}
 								style={{ pointerEvents: "auto" }}
-								url={item.video}
-								light={item.image}
-								config={{
-									file: {
-										attributes: {
-											controlsList: isLiveItem
-												? "nofullscreen nodownload"
-												: "nodownload",
-										},
-									},
-								}}
+								url={video}
+								light={!isLiveItem && item.image}
 							/>
 						</div>
 					</motion.div>
