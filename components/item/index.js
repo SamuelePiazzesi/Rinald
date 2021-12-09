@@ -54,6 +54,15 @@ const Item = ({ item, onClose }) => {
 								style={{ pointerEvents: "auto" }}
 								url={item.video}
 								light={item.image}
+								config={{
+									file: {
+										attributes: {
+											controlsList: isLiveItem
+												? "nofullscreen nodownload"
+												: "nodownload",
+										},
+									},
+								}}
 							/>
 						</div>
 					</motion.div>
