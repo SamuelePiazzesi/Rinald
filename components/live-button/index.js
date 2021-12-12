@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { lives } from "../../constants";
+import _ from 'lodash'
 
 const LiveButton = ({ onClick }) => {
-	const getItem = () => {
+	const getItem = useCallback(() => {
 		const date = new Date();
 		const currentHour = date.getHours();
 		let item = _.find(lives, (live) => live.id === "work");
@@ -20,11 +21,13 @@ const LiveButton = ({ onClick }) => {
 		}
 
 		return item;
-	};
+	}, []);
+
+	
 	return (
 		<div
 			className="cursor-pointer fixed bottom-4 md:bottom-6 right-2 md:right-8"
-			onClick={() => onClick(getItem())}
+			onClick={() => onClick(getItem)}
 		>
 			<div className="w-12 md:w-16 h-12 md:h-16 live-image relative rounded-full">
 				<div className="w-3 md:w-4 h-3 md:h-4 bg-green-400 absolute rounded-full right-1"></div>
