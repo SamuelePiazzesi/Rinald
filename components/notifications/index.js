@@ -8,7 +8,6 @@ const Notifications = () => {
 		const interval = setInterval(() => {
 			toast(_.sample(notifications), {
 				icon: "🔥",
-				position: "top-center",
 				autoClose: 5000,
 				hideProgressBar: true,
 				closeOnClick: true,
@@ -22,7 +21,7 @@ const Notifications = () => {
 
 	return (
 		<ToastContainer
-			position="top-center"
+			position="top-left"
 			autoClose={4000}
 			hideProgressBar
 			newestOnTop={false}
