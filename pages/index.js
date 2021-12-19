@@ -1,5 +1,6 @@
 import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import { useState } from "react";
+import { ToastContainer } from "react-toastify";
 import Item from "../components/item";
 import Jumbotron from "../components/jumbotron";
 import List from "../components/list";
@@ -14,7 +15,6 @@ const Home = () => {
 		<Layout disableOverflow={selectedVideo}>
 			<AnimateSharedLayout type="crossfade">
 				<Jumbotron onPlay={(item) => setSelectedVideo(item)} />
-
 				<AnimatePresence>
 					{selectedVideo && (
 						<Item item={selectedVideo} onClose={() => setSelectedVideo()} />
