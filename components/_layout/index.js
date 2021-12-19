@@ -5,7 +5,7 @@ import { useWindowSize } from "../../hooks/window-size";
 import Footer from "./footer";
 import Header from "./header";
 
-const Layout = ({ disableOverflow, children }) => {
+const Layout = ({ disableOverflow = false, children }) => {
 	const variants = {
 		visible: {
 			opacity: 1,
@@ -42,7 +42,9 @@ const Layout = ({ disableOverflow, children }) => {
 		<>
 			<div
 				className={`bg-black w-full ${
-					visibleVideo || disableOverflow ? "h-screen overflow-y-hidden" : ""
+					visibleVideo || disableOverflow
+						? "h-screen overflow-y-hidden fixed"
+						: ""
 				}`}
 			>
 				<motion.div
