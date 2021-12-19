@@ -2,6 +2,7 @@ import { motion, useAnimation } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 import { useWindowSize } from "../../hooks/window-size";
+import Notifications from "../notifications";
 import Footer from "./footer";
 import Header from "./header";
 
@@ -54,6 +55,7 @@ const Layout = ({ disableOverflow = false, children }) => {
 				>
 					<h1>ua</h1>
 					<Header />
+					<Notifications />
 					<main className="relative pt-24  md:pt-32 pb-8 md:pb-12 px-4 lg:max-w-5xl m-auto">
 						{children}
 					</main>

@@ -271,3 +271,12 @@ export const skillsList = [
 		premium: true,
 	},
 ];
+
+export const notifications = [
+	"Imprenditore Imbruttito ha appena visualizzato il mio sito",
+	"Elon Musk ha appena scaricato il mio CV",
+	"3 persone hanno appena confuso questo sito per Netflix",
+	"Bill Gates mi ha appena chiesto di entrate nei massoni",
+	"Un principe africano mi ha proposto un contratto a sei zeri se prima gli mando 5k euro ",
+	"Jeff Bezos ha appena offerto il triplo per rifare questo sito come Amazon prime video",
+];
