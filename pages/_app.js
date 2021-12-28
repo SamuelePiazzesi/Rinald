@@ -27,6 +27,10 @@ function MyApp({ Component, pageProps }) {
 				<title>Rinald Sefa - Creative & Art Director</title>
 			</Head>
 
+			<Head>
+				<script type="text/javascript" src="/static/clearbit.js" />
+			</Head>
+
 			<Component {...pageProps} />
 		</>
 	);
